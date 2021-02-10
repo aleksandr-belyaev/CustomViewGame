@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
-
+    
     var customView: CustomView!
     let viewCount: Int = 7
     
@@ -35,32 +35,49 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func panAction(_ gesture: UIPanGestureRecognizer) {
+        let gestureTranslation = gesture.translation(in: view)
         
-//            let bluewViewFrame = blueView.frame
-//            let orangeViewFrame = orangeView.frame
-            
-            let gestureTranslation = gesture.translation(in: view)
-            
-            guard let gestureView = gesture.view else {
-                return
+        guard let gestureView = gesture.view else {
+            return
+        }
+        
+        gestureView.center = CGPoint (
+            x: gestureView.center.x + gestureTranslation.x,
+            y: gestureView.center.y + gestureTranslation.y
+        )
+        
+        gesture.setTranslation(.zero, in: view)
+        
+        guard gesture.state == .ended else {
+            return
+        }
+        
+        for subview in view.subviews {
+            if let currentView = gestureView as? CustomView {
+                if let targetView = subview as? CustomView {
+                    if currentView !== targetView {
+                        let currentViewFrame = currentView.frame
+                        let targetViewFrame = targetView.frame
+                        
+                        if (targetViewFrame.intersects(currentViewFrame)) {
+                            if !targetView.isHidden {
+                                print("current view \(currentView.elementNumberLabel.text!) is inside the view \(targetView.elementNumberLabel.text!)")
+                                targetView.workingView.backgroundColor = .blue
+                                
+                                currentView.isHidden = true
+                            }
+                        }
+                    }
+                    
+                }
             }
-            
-            gestureView.center = CGPoint (
-                x: gestureView.center.x + gestureTranslation.x,
-                y: gestureView.center.y + gestureTranslation.y
-            )
-            
-            gesture.setTranslation(.zero, in: view)
-            
-            guard gesture.state == .ended else {
-                return
-            }
-            
-//            for value in Int(orangeViewFrame.minY)...Int(orangeViewFrame.maxY) {
-//                if Int(bluewViewFrame.origin.y) == value {
-//                    blueView.isHidden = true
-//                }
-//            }
+        }
+        
+        //            for value in Int(orangeViewFrame.minY)...Int(orangeViewFrame.maxY) {
+        //                if Int(bluewViewFrame.origin.y) == value {
+        //                    blueView.isHidden = true
+        //                }
+        //            }
     }
 }
 
