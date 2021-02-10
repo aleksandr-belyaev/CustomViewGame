@@ -18,10 +18,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         let viewSize = min(view.bounds.height, view.bounds.width)/4.0
         var x: CGFloat = viewSize/2
         var y: CGFloat = viewSize/2
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panAction))
-        panGesture.delegate = self
         
         for i in 0..<viewCount {
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panAction))
+            panGesture.delegate = self
             customView = CustomView(frame: CGRect(x: x, y: y, width: viewSize, height: viewSize), number: String(i+1))
             customView.addGestureRecognizer(panGesture)
             view.addSubview(customView)
@@ -35,8 +35,32 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func panAction(_ gesture: UIPanGestureRecognizer) {
-        let vieww = gesture.view as! CustomView
-        print(vieww.elementNumberLabel.text!)
+        
+//            let bluewViewFrame = blueView.frame
+//            let orangeViewFrame = orangeView.frame
+            
+            let gestureTranslation = gesture.translation(in: view)
+            
+            guard let gestureView = gesture.view else {
+                return
+            }
+            
+            gestureView.center = CGPoint (
+                x: gestureView.center.x + gestureTranslation.x,
+                y: gestureView.center.y + gestureTranslation.y
+            )
+            
+            gesture.setTranslation(.zero, in: view)
+            
+            guard gesture.state == .ended else {
+                return
+            }
+            
+//            for value in Int(orangeViewFrame.minY)...Int(orangeViewFrame.maxY) {
+//                if Int(bluewViewFrame.origin.y) == value {
+//                    blueView.isHidden = true
+//                }
+//            }
     }
 }
 
