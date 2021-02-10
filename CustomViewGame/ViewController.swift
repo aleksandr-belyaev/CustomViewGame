@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                             if !targetView.isHidden {
                                 print("current view \(currentView.elementNumberLabel.text!) is inside the view \(targetView.elementNumberLabel.text!)")
                                 targetView.workingView.backgroundColor = .blue
-                                
+                                targetView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                                 currentView.isHidden = true
                             }
                         }
