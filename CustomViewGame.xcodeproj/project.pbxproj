@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E729017925D36E98006BDB38 /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729017825D36E98006BDB38 /* PanGesture.swift */; };
 		E784F50C25D218E500D90857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50B25D218E500D90857 /* AppDelegate.swift */; };
 		E784F50E25D218E500D90857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50D25D218E500D90857 /* SceneDelegate.swift */; };
 		E784F51025D218E500D90857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50F25D218E500D90857 /* ViewController.swift */; };
 		E784F51325D218E500D90857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784F51125D218E500D90857 /* Main.storyboard */; };
 		E784F51525D218E600D90857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E784F51425D218E600D90857 /* Assets.xcassets */; };
 		E784F51825D218E600D90857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784F51625D218E600D90857 /* LaunchScreen.storyboard */; };
+		E784F52625D21B7A00D90857 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E784F52525D21B7A00D90857 /* CustomView.xib */; };
+		E784F52925D21C2A00D90857 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F52825D21C2A00D90857 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E729017825D36E98006BDB38 /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		E784F50825D218E500D90857 /* CustomViewGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E784F50B25D218E500D90857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E784F50D25D218E500D90857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		E784F51425D218E600D90857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E784F51725D218E600D90857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E784F51925D218E600D90857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E784F52525D21B7A00D90857 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		E784F52825D21C2A00D90857 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				E784F50B25D218E500D90857 /* AppDelegate.swift */,
 				E784F50D25D218E500D90857 /* SceneDelegate.swift */,
 				E784F50F25D218E500D90857 /* ViewController.swift */,
+				E784F52525D21B7A00D90857 /* CustomView.xib */,
+				E784F52825D21C2A00D90857 /* CustomView.swift */,
+				E729017825D36E98006BDB38 /* PanGesture.swift */,
 				E784F51125D218E500D90857 /* Main.storyboard */,
 				E784F51425D218E600D90857 /* Assets.xcassets */,
 				E784F51625D218E600D90857 /* LaunchScreen.storyboard */,
@@ -125,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E784F51825D218E600D90857 /* LaunchScreen.storyboard in Resources */,
+				E784F52625D21B7A00D90857 /* CustomView.xib in Resources */,
 				E784F51525D218E600D90857 /* Assets.xcassets in Resources */,
 				E784F51325D218E500D90857 /* Main.storyboard in Resources */,
 			);
@@ -137,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E729017925D36E98006BDB38 /* PanGesture.swift in Sources */,
 				E784F51025D218E500D90857 /* ViewController.swift in Sources */,
+				E784F52925D21C2A00D90857 /* CustomView.swift in Sources */,
 				E784F50C25D218E500D90857 /* AppDelegate.swift in Sources */,
 				E784F50E25D218E500D90857 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.bag.mobile.CustomViewGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.bag.mobile.CustomViewGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
