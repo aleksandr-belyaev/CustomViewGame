@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E729017925D36E98006BDB38 /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E729017825D36E98006BDB38 /* PanGesture.swift */; };
 		E784F50C25D218E500D90857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50B25D218E500D90857 /* AppDelegate.swift */; };
 		E784F50E25D218E500D90857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50D25D218E500D90857 /* SceneDelegate.swift */; };
 		E784F51025D218E500D90857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784F50F25D218E500D90857 /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E729017825D36E98006BDB38 /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
 		E784F50825D218E500D90857 /* CustomViewGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E784F50B25D218E500D90857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E784F50D25D218E500D90857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				E784F50F25D218E500D90857 /* ViewController.swift */,
 				E784F52525D21B7A00D90857 /* CustomView.xib */,
 				E784F52825D21C2A00D90857 /* CustomView.swift */,
-				E729017825D36E98006BDB38 /* PanGesture.swift */,
 				E784F51125D218E500D90857 /* Main.storyboard */,
 				E784F51425D218E600D90857 /* Assets.xcassets */,
 				E784F51625D218E600D90857 /* LaunchScreen.storyboard */,
@@ -147,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E729017925D36E98006BDB38 /* PanGesture.swift in Sources */,
 				E784F51025D218E500D90857 /* ViewController.swift in Sources */,
 				E784F52925D21C2A00D90857 /* CustomView.swift in Sources */,
 				E784F50C25D218E500D90857 /* AppDelegate.swift in Sources */,

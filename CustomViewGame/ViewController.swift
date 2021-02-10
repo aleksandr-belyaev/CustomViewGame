@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     var customView: CustomView!
+    var panGesture = UIPanGestureRecognizer()
     let viewCount: Int = 7
     
     override func viewDidLoad() {
@@ -18,12 +19,9 @@ class ViewController: UIViewController {
         let viewSize = min(view.bounds.height, view.bounds.width)/4.0
         var x: CGFloat = viewSize/2
         var y: CGFloat = viewSize/2
-        print("View size is \(viewSize), x is \(x), y is \(y)")
         
         for i in 0..<viewCount {
-            print("Will draw number \(i) view on x: \(x) and y: \(y)")
             customView = CustomView(frame: CGRect(x: x, y: y, width: viewSize, height: viewSize), number: String(i+1))
-            
             view.addSubview(customView)
             
             if ((x + viewSize * 1.5) >= view.bounds.maxX) {
@@ -32,8 +30,13 @@ class ViewController: UIViewController {
             } else {
                 x = x + viewSize + 5
             }
-            
         }
+        customView.addGestureRecognizer(panGesture)
+    }
+    
+    
+    @objc func handlePanGesture() {
+        
     }
 
     @IBAction func panAction(_ gesture: UIPanGestureRecognizer) {

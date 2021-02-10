@@ -42,7 +42,6 @@ class CustomView: UIView {
         workingView.frame = bounds
         workingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         workingView.layer.cornerRadius = frame.size.width / 2
-        workingView.addGestureRecognizer(PanGesture())
         addSubview(workingView)
     }
     
