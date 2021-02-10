@@ -72,12 +72,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 }
             }
         }
-        
-        //            for value in Int(orangeViewFrame.minY)...Int(orangeViewFrame.maxY) {
-        //                if Int(bluewViewFrame.origin.y) == value {
-        //                    blueView.isHidden = true
-        //                }
-        //            }
     }
 }
 
